@@ -536,7 +536,7 @@ if __name__ == "__main__":
     virus_datadir = "data/ByVirus/set"
     if not os.path.exists(virus_datadir):
         os.makedirs(virus_datadir)
-    viruses = ["FIV", "HCV", "HIV", "HPIV3", "HSV1", "INFVA", "Other", "RSV", "SARSCoV"]
+    viruses = ["FIV", "HCV", "HIV", "HPIV3", "HSV1", "INFVA",  "RSV", "SARSCoV"]
     viruses = viruses + list(map(lambda x: "non-"+x, viruses))
     for vm in tqdm(viruses):
         df = read_fasta("./Fasta/ByVirus/fasta/{:s}.faa".format(vm))
